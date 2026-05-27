@@ -3,12 +3,21 @@
 ## Purpose
 This workbook helps Azure Sales Specialists use AI daily for account strategy, messaging quality, and follow-up execution.
 
-## Session Timing (SSP Track - 35 minutes in workshop)
-- 5 min: AI value framing for sales workflow
-- 8 min: Copilot personalization for SSP tasks
-- 7 min: Copilot Cowork team flow
-- 10 min: daily practical SSP use cases
-- 5 min: ClawPilot operational use case
+## Session Timing (SSP Track - 60 minutes)
+- 8 min: Why AI now for sales roles
+- 12 min: Copilot personalization for SSP tasks
+- 10 min: Copilot Cowork handoff with SE
+- 20 min: daily practical SSP use cases (3 mini-labs)
+- 7 min: ClawPilot operational use case
+- 3 min: wrap-up commitments
+
+## 60-Minute Flow (Facilitator + Participant)
+- 00:00-00:08: baseline and ROI framing
+- 00:08-00:20: personalize Copilot and compare before/after
+- 00:20-00:30: run Cowork template with SE handoff
+- 00:30-00:50: execute use cases A, B, C with rapid debrief
+- 00:50-00:57: ClawPilot expense workflow simulation
+- 00:57-01:00: commitment + next two-week actions
 
 ## 0) Why AI in Your Daily Sales Work
 
@@ -36,10 +45,11 @@ Frame proposals with value hypotheses, risks, and measurable next steps.
 Use plain language and avoid technical jargon unless explicitly requested.
 For each output, include a clear CTA and owner.
 
-### Exercise
+### Exercise (12 min)
 1. Paste your profile into your Copilot instructions.
 2. Run one prompt before and after personalization.
 3. Compare relevance for your account.
+4. Improve your instructions with one concrete rule after first run.
 
 ### Quality Checklist
 - Is the message tailored by stakeholder persona?
@@ -55,13 +65,16 @@ For each output, include a clear CTA and owner.
 - Output format: value story + technical validation questions
 - Reviewer persona: account team lead
 
-### Exercise
+### Exercise (10 min)
 1. Work in pair mode with an SE participant.
 2. You prepare value narrative and objections.
 3. SE maps feasibility and technical options.
 4. You refine a customer-facing story.
+5. Finalize one customer-ready answer in under 150 words.
 
 ## 3) Daily Practical SSP Use Cases
+
+Run each mini-lab for 6 minutes, then do a 1-minute debrief.
 
 ## Use Case A: Account Brief in 10 Minutes
 Prompt:
@@ -71,6 +84,7 @@ Notes:
 - Most useful section:
 - Data still missing:
 - What I changed before sharing:
+- Estimated time saved:
 
 ## Use Case B: Objection Response Coaching
 Prompt:
@@ -80,6 +94,7 @@ Notes:
 - Strongest rebuttal pattern:
 - Objection that still needs better evidence:
 - New discovery question to add:
+- Evidence source to prepare next time:
 
 ## Use Case C: Follow-Up Email Pack
 Prompt:
@@ -89,6 +104,7 @@ Notes:
 - Best-performing version:
 - CTA clarity score:
 - Final personalization changes:
+- Stakeholder response expectation:
 
 ## 4) ClawPilot for SSP
 
@@ -97,11 +113,17 @@ Notes:
 - Action tracker generation from meetings
 - Expense preparation and admin workflow acceleration
 
-### Exercise: Monthly Expense Preparation
+### Exercise: Monthly Expense Preparation (7 min)
 1. Provide sample receipts and categories.
 2. Ask ClawPilot to normalize and classify.
 3. Ask for missing fields and policy checks.
 4. Produce a review-ready draft before submission.
+5. Capture one improvement to your prompt for next month.
+
+## Wrap-Up (Last 3 min)
+- One task I will automate this week:
+- One risk I will always review manually:
+- One prompt I will share with peers:
 
 ## 2-Week Adoption Plan
 - Weekly task to automate:

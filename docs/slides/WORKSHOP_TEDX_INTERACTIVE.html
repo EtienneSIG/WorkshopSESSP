@@ -53,8 +53,10 @@
       animation: fade 420ms ease;
       flex-direction: column;
       justify-content: center;
-      gap: 1.2rem;
-      padding-bottom: 4vh;
+      gap: 1rem;
+      padding-top: 1.5vh;
+      padding-bottom: 3.5vh;
+      overflow: hidden;
     }
     .slide.active { display: flex; }
     @keyframes fade {
@@ -105,8 +107,11 @@
     .two-col {
       grid-template-columns: 1fr 1fr;
       gap: 1.4vw;
-      align-items: start;
+      align-items: stretch;
+      flex: 1;
+      min-height: 0;
     }
+    .two-col > * { min-height: 0; overflow: hidden; }
     .slide.active.two-col { display: grid; }
     .panel {
       background: var(--card);
@@ -115,6 +120,8 @@
       padding: 1.25rem 1.3rem;
       box-shadow: 0 12px 24px rgba(33,33,33,0.14);
       border: 1px solid rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
     }
     h2 {
       margin: 0 0 0.8rem;
@@ -268,9 +275,9 @@
     </section>
 
     <section class="slide two-col">
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <h2>Step 0: Why AI Daily</h2>
-        <div class="cards">
+      <div style="display:flex;flex-direction:column;gap:0.8rem;min-height:0;">
+        <h2 style="flex-shrink:0;">Step 0: Why AI Daily</h2>
+        <div class="cards" style="flex-shrink:0;">
           <article class="card">
             <div style="font-size:1.8rem;">⏱️</div>
             <div class="kpi">-30%</div>
@@ -287,18 +294,20 @@
             <div>Meeting readiness</div>
           </article>
         </div>
-        <img style="width:100%;border-radius:16px;object-fit:cover;max-height:24vh;box-shadow:0 10px 22px rgba(33,33,33,0.18);" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Speaker presenting to an audience">
-        <div class="photo-credit">Photo: Unsplash (free-use)</div>
+        <img style="width:100%;border-radius:16px;object-fit:cover;flex:1;min-height:0;box-shadow:0 10px 22px rgba(33,33,33,0.18);" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Speaker presenting to an audience">
+        <div class="photo-credit" style="flex-shrink:0;">Photo: Unsplash (free-use)</div>
       </div>
-      <div class="panel">
-        <h3>🎬 Live moment</h3>
-        <ul>
-          <li>Write a recap email manually — 3 minutes.</li>
-          <li>Redo it with Copilot — 45 seconds.</li>
-          <li>Ask: what changed in quality and confidence?</li>
-        </ul>
-        <p class="fun" style="margin-top:0.8rem;">Pro tip: ask for a "bad version" first,<br>then improve it live with the audience.</p>
-        <div style="margin-top:1rem;background:rgba(46,196,182,0.12);border-radius:14px;padding:0.8rem 1rem;border-left:4px solid var(--accent-3);">
+      <div class="panel" style="justify-content:space-between;">
+        <div>
+          <h3>🎬 Live moment</h3>
+          <ul>
+            <li>Write a recap email manually — 3 minutes.</li>
+            <li>Redo it with Copilot — 45 seconds.</li>
+            <li>Ask: what changed in quality and confidence?</li>
+          </ul>
+          <p class="fun" style="margin-top:0.8rem;">Pro tip: ask for a "bad version" first,<br>then improve it live with the audience.</p>
+        </div>
+        <div style="margin-top:auto;padding-top:1rem;background:rgba(46,196,182,0.12);border-radius:14px;padding:0.9rem 1rem;border-left:4px solid var(--accent-3);">
           <strong>Rule #1</strong><br>Human owns judgment. AI removes the friction.
         </div>
       </div>
@@ -341,34 +350,42 @@
     </section>
 
     <section class="slide two-col">
-      <div class="panel" style="border-top:5px solid #2196f3;">
-        <h3>🔧 Track A: Solution Engineer</h3>
-        <ul>
-          <li>📋 Requirements → architecture options</li>
-          <li>⚖️ Trade-off matrix: security, cost, scale</li>
-          <li>🩺 Log triage ranked by probability</li>
-          <li>🏗️ IaC scaffold + validation checklist</li>
-        </ul>
-        <div style="margin-top:0.8rem;background:#e3f2fd;border-radius:12px;padding:0.65rem 0.9rem;font-style:italic;color:#1565c0;">"Show me the risks before we ship."</div>
-        <img style="width:100%;border-radius:12px;margin-top:0.9rem;max-height:20vh;object-fit:cover;" src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=900&q=75" alt="Developer working on a technical architecture">
-        <div class="photo-credit">Photo: Unsplash (free-use)</div>
+      <div class="panel" style="border-top:5px solid #2196f3;justify-content:space-between;">
+        <div>
+          <h3>🔧 Track A: Solution Engineer</h3>
+          <ul>
+            <li>📋 Requirements → architecture options</li>
+            <li>⚖️ Trade-off matrix: security, cost, scale</li>
+            <li>🩺 Log triage ranked by probability</li>
+            <li>🏗️ IaC scaffold + validation checklist</li>
+          </ul>
+          <div style="margin-top:0.8rem;background:#e3f2fd;border-radius:12px;padding:0.65rem 0.9rem;font-style:italic;color:#1565c0;">"Show me the risks before we ship."</div>
+        </div>
+        <div style="margin-top:auto;padding-top:0.8rem;">
+          <img style="width:100%;border-radius:12px;height:18vh;object-fit:cover;" src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=900&q=75" alt="Developer working on technical architecture">
+          <div class="photo-credit">Photo: Unsplash (free-use)</div>
+        </div>
       </div>
-      <div class="panel" style="border-top:5px solid var(--accent);">
-        <h3>💼 Track B: Sales Specialist</h3>
-        <ul>
-          <li>📊 Account signals → value narrative</li>
-          <li>📄 Proposal skeleton with milestones</li>
-          <li>🥊 Objection coaching cards</li>
-          <li>✉️ Persona-based follow-up sequence</li>
-        </ul>
-        <div style="margin-top:0.8rem;background:#fce4ec;border-radius:12px;padding:0.65rem 0.9rem;font-style:italic;color:#b71c1c;">"Make value obvious in 30 seconds."</div>
-        <img style="width:100%;border-radius:12px;margin-top:0.9rem;max-height:20vh;object-fit:cover;" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=75" alt="Sales team in a meeting">
-        <div class="photo-credit">Photo: Unsplash (free-use)</div>
+      <div class="panel" style="border-top:5px solid var(--accent);justify-content:space-between;">
+        <div>
+          <h3>💼 Track B: Sales Specialist</h3>
+          <ul>
+            <li>📊 Account signals → value narrative</li>
+            <li>📄 Proposal skeleton with milestones</li>
+            <li>🥊 Objection coaching cards</li>
+            <li>✉️ Persona-based follow-up sequence</li>
+          </ul>
+          <div style="margin-top:0.8rem;background:#fce4ec;border-radius:12px;padding:0.65rem 0.9rem;font-style:italic;color:#b71c1c;">"Make value obvious in 30 seconds."</div>
+        </div>
+        <div style="margin-top:auto;padding-top:0.8rem;">
+          <img style="width:100%;border-radius:12px;height:18vh;object-fit:cover;" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=75" alt="Sales team in a meeting">
+          <div class="photo-credit">Photo: Unsplash (free-use)</div>
+        </div>
       </div>
     </section>
 
     <section class="slide two-col">
-      <div style="display:flex;flex-direction:column;gap:1rem;justify-content:flex-start;">
+      <div style="display:flex;flex-direction:column;gap:0.8rem;justify-content:center;">
         <h2>SE + SSP = Better Together 🤜🤛</h2>
         <p style="color:#355070;margin:0;">Business narrative + technical credibility = deal velocity.</p>
         <div style="display:flex;flex-direction:column;gap:0.6rem;">
@@ -383,72 +400,76 @@
           </div>
         </div>
       </div>
-      <div>
-        <img style="width:100%;border-radius:20px;object-fit:cover;max-height:62vh;box-shadow:0 16px 36px rgba(33,33,33,0.2);" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating in a workshop room">
+      <div style="display:flex;flex-direction:column;min-height:0;">
+        <img style="width:100%;border-radius:20px;object-fit:cover;flex:1;min-height:0;box-shadow:0 16px 36px rgba(33,33,33,0.2);" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating in a workshop room">
         <div class="photo-credit">Photo: Unsplash (free-use)</div>
       </div>
     </section>
 
     <section class="slide two-col">
-      <div style="display:flex;flex-direction:column;gap:1rem;">
-        <h2>Step 4: What is ClawPilot? 🦾</h2>
-        <p style="color:#355070;margin:0;">Task-oriented AI execution for structured, repetitive operational workflows.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+      <div style="display:flex;flex-direction:column;gap:0.8rem;min-height:0;">
+        <h2 style="flex-shrink:0;">Step 4: What is ClawPilot? 🦾</h2>
+        <p style="color:#355070;margin:0;flex-shrink:0;">Task-oriented AI execution for structured, repetitive operational workflows.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;flex-shrink:0;">
           <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">🧾 Expense prep</div>
           <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">✅ Action trackers</div>
           <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">📬 Follow-up packs</div>
           <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">⚙️ Admin tasks</div>
         </div>
-        <img style="width:100%;border-radius:16px;object-fit:cover;max-height:28vh;box-shadow:0 10px 22px rgba(33,33,33,0.18);" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="Business payment and expense management">
-        <div class="photo-credit">Photo: Unsplash (free-use)</div>
+        <img style="width:100%;border-radius:16px;object-fit:cover;flex:1;min-height:0;box-shadow:0 10px 22px rgba(33,33,33,0.18);" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="Business payment and expense management">
+        <div class="photo-credit" style="flex-shrink:0;">Photo: Unsplash (free-use)</div>
       </div>
-      <div class="panel">
-        <h3>🎬 Live demo: Expense workflow</h3>
-        <div style="display:flex;flex-direction:column;gap:0.7rem;margin-top:0.4rem;">
-          <div style="display:flex;align-items:flex-start;gap:0.7rem;">
-            <span style="font-size:1.5rem;">1️⃣</span>
-            <div><strong>Input receipts</strong><br><span style="color:var(--muted);font-size:0.9rem;">Dates, merchants, amounts, categories</span></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:0.7rem;">
-            <span style="font-size:1.5rem;">2️⃣</span>
-            <div><strong>ClawPilot normalizes</strong><br><span style="color:var(--muted);font-size:0.9rem;">Classifies, validates, flags missing fields</span></div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:0.7rem;">
-            <span style="font-size:1.5rem;">3️⃣</span>
-            <div><strong>Review the draft</strong><br><span style="color:var(--muted);font-size:0.9rem;">Submission-ready — you validate before sending</span></div>
+      <div class="panel" style="justify-content:space-between;">
+        <div>
+          <h3>🎬 Live demo: Expense workflow</h3>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;margin-top:0.6rem;">
+            <div style="display:flex;align-items:flex-start;gap:0.7rem;">
+              <span style="font-size:1.5rem;flex-shrink:0;">1️⃣</span>
+              <div><strong>Input receipts</strong><br><span style="color:var(--muted);font-size:0.9rem;">Dates, merchants, amounts, categories</span></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.7rem;">
+              <span style="font-size:1.5rem;flex-shrink:0;">2️⃣</span>
+              <div><strong>ClawPilot normalizes</strong><br><span style="color:var(--muted);font-size:0.9rem;">Classifies, validates, flags missing fields</span></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.7rem;">
+              <span style="font-size:1.5rem;flex-shrink:0;">3️⃣</span>
+              <div><strong>Review the draft</strong><br><span style="color:var(--muted);font-size:0.9rem;">Submission-ready — you validate before sending</span></div>
+            </div>
           </div>
         </div>
-        <div style="margin-top:1rem;background:rgba(46,196,182,0.15);border-radius:12px;padding:0.7rem 0.9rem;border-left:4px solid var(--accent-3);">
+        <div style="margin-top:auto;padding-top:1rem;background:rgba(46,196,182,0.15);border-radius:12px;padding:0.8rem 0.9rem;border-left:4px solid var(--accent-3);">
           You own the submit button. Always.
         </div>
       </div>
     </section>
 
     <section class="slide two-col">
-      <div class="panel">
-        <h3>🎯 Your commitment right now</h3>
-        <div style="display:flex;flex-direction:column;gap:0.8rem;margin-top:0.5rem;">
-          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-            <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
-            <span>Pick <strong>one weekly task</strong> to automate starting tomorrow.</span>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-            <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
-            <span>Measure <strong>time before vs after</strong> AI assistance.</span>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-            <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
-            <span>Share <strong>one prompt improvement</strong> with the team this week.</span>
+      <div class="panel" style="justify-content:space-between;">
+        <div>
+          <h3>🎯 Your commitment right now</h3>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;margin-top:0.5rem;">
+            <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+              <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
+              <span>Pick <strong>one weekly task</strong> to automate starting tomorrow.</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+              <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
+              <span>Measure <strong>time before vs after</strong> AI assistance.</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+              <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
+              <span>Share <strong>one prompt improvement</strong> with the team this week.</span>
+            </div>
           </div>
         </div>
-        <div style="margin-top:1.2rem;background:#fff3e0;border-radius:14px;padding:0.8rem 1rem;">
+        <div style="background:#fff3e0;border-radius:14px;padding:0.8rem 1rem;margin-top:auto;">
           📅 Follow-up: 15-min team AI standup in 2 weeks.
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;justify-content:center;gap:1rem;">
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:1.2rem;padding:1rem 0.5rem;">
         <h2 style="margin:0;">Final challenge 🚀</h2>
-        <p class="title" style="font-size:clamp(2rem,4.6vw,4.2rem);margin:0;color:#1b4332;">MAKE TOMORROW 20% FASTER</p>
-        <p class="fun" style="font-size:1.1rem;">If your prompt is boring,<br>your output is boring.</p>
+        <p class="title" style="font-size:clamp(1.8rem,4.2vw,3.8rem);margin:0;color:#1b4332;">MAKE TOMORROW<br>20% FASTER</p>
+        <p class="fun" style="font-size:1.1rem;margin:0;">If your prompt is boring,<br>your output is boring.</p>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
           <span class="visual-chip">🧠 personalized</span>
           <span class="visual-chip">🤝 shared</span>

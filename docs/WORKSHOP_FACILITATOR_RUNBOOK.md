@@ -1,8 +1,8 @@
-# Facilitator Runbook (1h10)
+# Facilitator Runbook (1h00)
 
 This runbook is designed to be used live during the workshop.
 
-## 0. Why Use AI Daily (10 min)
+## 0. Why Use AI Daily (8 min)
 
 ### Goal
 Create urgency and relevance. Show that AI is not a gimmick; it is a leverage tool.
@@ -19,7 +19,7 @@ Create urgency and relevance. Show that AI is not a gimmick; it is a leverage to
 ### Slide or Whiteboard Message
 - AI should remove low-value effort, not replace customer trust.
 
-## 1. Personalize Copilot (12 min)
+## 1. Personalize Copilot (10 min)
 
 ### Goal
 Move from generic answers to role-aware assistance.
@@ -34,13 +34,13 @@ Move from generic answers to role-aware assistance.
    - Language and brevity level
 4. Demonstrate before/after with the same prompt.
 
-### Exercise (3 min)
+### Exercise (2 min)
 Each participant writes 5-8 lines of personal instructions and tests one prompt.
 
 ### Success Criteria
 - Output reflects role language and expected structure.
 
-## 2. Personalize Copilot Cowork (12 min)
+## 2. Personalize Copilot Cowork (10 min)
 
 ### Goal
 Show how AI collaboration patterns improve team throughput.
@@ -58,17 +58,17 @@ Show how AI collaboration patterns improve team throughput.
    - SSP converts output into customer narrative
 4. Show versioning of prompts in a shared repo/folder.
 
-### Exercise (3 min)
+### Exercise (2 min)
 Pairs create one shared prompt template and run it on a mock account.
 
 ### Success Criteria
 - Same template works for both participants with minor edits.
 
-## 3. Practical Daily Use Cases (26 min)
+## 3. Practical Daily Use Cases (22 min)
 
-## Path A: Solution Engineer (13 min)
+## Path A: Solution Engineer (11 min)
 
-### Use Case 1: Discovery to Architecture Draft (5 min)
+### Use Case 1: Discovery to Architecture Draft (4 min)
 1. Input customer requirements and constraints.
 2. Ask Copilot for 2 architecture options with trade-offs.
 3. Request risk register and assumptions.
@@ -78,13 +78,13 @@ Pairs create one shared prompt template and run it on a mock account.
 2. Ask for likely root causes ranked by probability.
 3. Ask for verification commands and rollback-safe actions.
 
-### Use Case 3: Demo Readiness (4 min)
+### Use Case 3: Demo Readiness (3 min)
 1. Ask for demo flow optimized for persona.
 2. Generate talk track, expected questions, and fallback plan.
 
-## Path B: Azure Sales Specialist (13 min)
+## Path B: Azure Sales Specialist (11 min)
 
-### Use Case 1: Account Brief in 10 Minutes (5 min)
+### Use Case 1: Account Brief in 10 Minutes (4 min)
 1. Input account notes and latest signals.
 2. Ask Copilot for executive summary and opportunity map.
 3. Request 3 business hypotheses tied to Azure outcomes.
@@ -94,12 +94,12 @@ Pairs create one shared prompt template and run it on a mock account.
 2. Ask for response framework: acknowledge, evidence, next step.
 3. Generate role-play snippets.
 
-### Use Case 3: Follow-Up at Scale (4 min)
+### Use Case 3: Follow-Up at Scale (3 min)
 1. Convert meeting notes into tailored follow-up email.
 2. Request stakeholder-specific versions (CIO, IT manager, finance).
 3. Ask for clear CTA and timeline.
 
-## 4. What is ClawPilot, Access, and Use Cases (10 min)
+## 4. What is ClawPilot, Access, and Use Cases (7 min)
 
 ### What ClawPilot Is
 ClawPilot is a task-oriented AI assistant experience focused on getting operational work done quickly with guided automation patterns.
@@ -120,7 +120,7 @@ ClawPilot is a task-oriented AI assistant experience focused on getting operatio
 3. Generate a review-ready expense draft.
 4. Human validates and submits.
 
-## Closing (Optional 5 min extension)
+## Closing (3 min)
 1. Ask each participant to pick one weekly task to automate.
 2. Define a 2-week experiment:
    - Baseline duration

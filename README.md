@@ -1,6 +1,6 @@
 # AI in the Field: Copilot, Copilot Cowork, and ClawPilot
 
-A practical 1h00-1h15 workshop for Microsoft Solution Engineers (SE) and Azure Sales Specialists (SSP).
+A practical 60-minute workshop for Microsoft Solution Engineers (SE) and Azure Sales Specialists (SSP).
 
 ## Workshop Outcome
 By the end of this workshop, participants will be able to:
@@ -11,16 +11,17 @@ By the end of this workshop, participants will be able to:
 - Understand what ClawPilot is, how to access it, and when to use it (including expense reports).
 
 ## Duration and Format
-- Total duration: 70 minutes (can be extended to 75 minutes with Q&A).
+- Total duration: 60 minutes.
 - Format: Live demo + hands-on checkpoints.
 - Audience split: Two role-based tracks.
 
-## Agenda (70 minutes)
-0. Why use AI in your daily work (10 min)
-1. How to personalize Copilot (12 min)
-2. How to personalize Copilot Cowork (12 min)
-3. Daily practical use cases by role (26 min)
-4. What is ClawPilot: access + use cases (10 min)
+## Agenda (60 minutes)
+0. Why use AI in your daily work (8 min)
+1. How to personalize Copilot (10 min)
+2. How to personalize Copilot Cowork (10 min)
+3. Daily practical use cases by role (20 min)
+4. What is ClawPilot: access + use cases (7 min)
+5. Wrap-up and commitments (2 min)
 
 See the full step-by-step plan in [docs/WORKSHOP_FACILITATOR_RUNBOOK.md](docs/WORKSHOP_FACILITATOR_RUNBOOK.md).
 

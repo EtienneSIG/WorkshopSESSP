@@ -29,10 +29,19 @@ Move from generic answers to role-aware assistance.
 2. Create role instructions:
    - SE: architecture accuracy, Azure best practices, ask clarifying questions.
    - SSP: customer value language, concise business outcomes, objection-aware tone.
-3. Add communication preferences:
+3. Add requirement-specification structure (mandatory):
+   - Context: account/workload/persona
+   - Objective: expected business or technical outcome
+   - Constraints: budget, timeline, compliance, risks
+   - Output format: bullets, table, email, executive summary
+4. Add communication preferences:
    - Output format (bullets, table, executive summary)
    - Language and brevity level
-4. Demonstrate before/after with the same prompt.
+5. Demonstrate before/after with the same prompt.
+
+### Key Message To Repeat
+- The quality of AI output is proportional to the quality of need specification.
+- Vague ask in, vague answer out. Precise ask in, actionable answer out.
 
 ### Exercise (2 min)
 Each participant writes 5-8 lines of personal instructions and tests one prompt.

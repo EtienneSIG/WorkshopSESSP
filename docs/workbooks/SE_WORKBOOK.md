@@ -3,21 +3,23 @@
 ## Purpose
 This workbook helps Azure Solution Engineers run practical AI-assisted workflows during and after the workshop.
 
-## Session Timing (SE Track - 60 minutes)
+## Session Timing (SE Track - 50-minute core + optional 10 minutes)
 - 8 min: Why AI now for technical roles
-- 12 min: Copilot personalization for SE tasks
+- 10 min: Copilot personalization for SE tasks
 - 10 min: Copilot Cowork handoff with SSP
-- 20 min: daily practical SE use cases (3 mini-labs)
-- 7 min: ClawPilot operational use case
+- 19 min: daily practical SE use cases (3 mini-labs)
 - 3 min: wrap-up commitments
+- Optional 10 min: ClawPilot operational module
 
-## 60-Minute Flow (Facilitator + Participant)
+## 50-Minute Core Flow (Facilitator + Participant)
 - 00:00-00:08: baseline and ROI framing
-- 00:08-00:20: personalize Copilot and compare before/after
-- 00:20-00:30: run Cowork template with SSP handoff
-- 00:30-00:50: execute use cases A, B, C with rapid debrief
-- 00:50-00:57: ClawPilot expense workflow simulation
-- 00:57-01:00: commitment + next two-week actions
+- 00:08-00:18: personalize Copilot and compare before/after
+- 00:18-00:28: run Cowork template with SSP handoff
+- 00:28-00:47: execute use cases A, B, C with rapid debrief
+- 00:47-00:50: commitment + next two-week actions
+
+## Optional 10-Minute ClawPilot Module
+- 00:50-01:00: ClawPilot expense workflow simulation
 
 ## 0) Why AI in Your Daily Technical Work
 
@@ -45,7 +47,7 @@ Output should be structured, concise, and implementation-ready.
 When providing options, always include trade-offs on cost, security, operations, and scalability.
 For scripts or IaC, include verification steps and rollback-safe guidance.
 
-### Exercise (12 min)
+### Exercise (10 min)
 1. Paste your profile into your Copilot instructions.
 2. Run one prompt before and after personalization.
 3. Compare output quality.
@@ -113,7 +115,7 @@ Notes:
 - Intake normalization and action-tracker generation
 - Expense preparation support and evidence organization
 
-### Exercise: Technical Trip Expense Prep (7 min)
+### Exercise: Technical Trip Expense Prep (Optional 10 min module)
 1. Prepare sample receipt list.
 2. Ask ClawPilot to classify by type and date.
 3. Ask for missing-field validation and policy flags.

@@ -1,4 +1,4 @@
-# Facilitator Runbook (1h00)
+# Facilitator Runbook (50-minute core + optional 10-minute ClawPilot module)
 
 This runbook is designed to be used live during the workshop.
 
@@ -64,16 +64,16 @@ Pairs create one shared prompt template and run it on a mock account.
 ### Success Criteria
 - Same template works for both participants with minor edits.
 
-## 3. Practical Daily Use Cases (22 min)
+## 3. Practical Daily Use Cases (19 min)
 
-## Path A: Solution Engineer (11 min)
+## Path A: Solution Engineer (9-10 min)
 
-### Use Case 1: Discovery to Architecture Draft (4 min)
+### Use Case 1: Discovery to Architecture Draft (3 min)
 1. Input customer requirements and constraints.
 2. Ask Copilot for 2 architecture options with trade-offs.
 3. Request risk register and assumptions.
 
-### Use Case 2: Troubleshooting Assistant (4 min)
+### Use Case 2: Troubleshooting Assistant (3 min)
 1. Paste logs/error summary.
 2. Ask for likely root causes ranked by probability.
 3. Ask for verification commands and rollback-safe actions.
@@ -82,14 +82,14 @@ Pairs create one shared prompt template and run it on a mock account.
 1. Ask for demo flow optimized for persona.
 2. Generate talk track, expected questions, and fallback plan.
 
-## Path B: Azure Sales Specialist (11 min)
+## Path B: Azure Sales Specialist (9-10 min)
 
-### Use Case 1: Account Brief in 10 Minutes (4 min)
+### Use Case 1: Account Brief in 10 Minutes (3 min)
 1. Input account notes and latest signals.
 2. Ask Copilot for executive summary and opportunity map.
 3. Request 3 business hypotheses tied to Azure outcomes.
 
-### Use Case 2: Objection Handling (4 min)
+### Use Case 2: Objection Handling (3 min)
 1. Input common objections (cost, migration risk, security).
 2. Ask for response framework: acknowledge, evidence, next step.
 3. Generate role-play snippets.
@@ -99,7 +99,15 @@ Pairs create one shared prompt template and run it on a mock account.
 2. Request stakeholder-specific versions (CIO, IT manager, finance).
 3. Ask for clear CTA and timeline.
 
-## 4. What is ClawPilot, Access, and Use Cases (7 min)
+## Closing (3 min, core session)
+1. Ask each participant to pick one weekly task to automate.
+2. Define a 2-week experiment:
+   - Baseline duration
+   - AI-assisted duration
+   - Quality score
+3. Schedule a follow-up review.
+
+## Optional Module: What is ClawPilot, Access, and Use Cases (10 min)
 
 ### What ClawPilot Is
 ClawPilot is a task-oriented AI assistant experience focused on getting operational work done quickly with guided automation patterns.
@@ -119,14 +127,6 @@ ClawPilot is a task-oriented AI assistant experience focused on getting operatio
 2. Ask ClawPilot to structure and validate line items.
 3. Generate a review-ready expense draft.
 4. Human validates and submits.
-
-## Closing (3 min)
-1. Ask each participant to pick one weekly task to automate.
-2. Define a 2-week experiment:
-   - Baseline duration
-   - AI-assisted duration
-   - Quality score
-3. Schedule a follow-up review.
 
 ## Facilitator Notes
 - Keep demos realistic and short.

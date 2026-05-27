@@ -3,21 +3,23 @@
 ## Purpose
 This workbook helps Azure Sales Specialists use AI daily for account strategy, messaging quality, and follow-up execution.
 
-## Session Timing (SSP Track - 60 minutes)
+## Session Timing (SSP Track - 50-minute core + optional 10 minutes)
 - 8 min: Why AI now for sales roles
-- 12 min: Copilot personalization for SSP tasks
+- 10 min: Copilot personalization for SSP tasks
 - 10 min: Copilot Cowork handoff with SE
-- 20 min: daily practical SSP use cases (3 mini-labs)
-- 7 min: ClawPilot operational use case
+- 19 min: daily practical SSP use cases (3 mini-labs)
 - 3 min: wrap-up commitments
+- Optional 10 min: ClawPilot operational module
 
-## 60-Minute Flow (Facilitator + Participant)
+## 50-Minute Core Flow (Facilitator + Participant)
 - 00:00-00:08: baseline and ROI framing
-- 00:08-00:20: personalize Copilot and compare before/after
-- 00:20-00:30: run Cowork template with SE handoff
-- 00:30-00:50: execute use cases A, B, C with rapid debrief
-- 00:50-00:57: ClawPilot expense workflow simulation
-- 00:57-01:00: commitment + next two-week actions
+- 00:08-00:18: personalize Copilot and compare before/after
+- 00:18-00:28: run Cowork template with SE handoff
+- 00:28-00:47: execute use cases A, B, C with rapid debrief
+- 00:47-00:50: commitment + next two-week actions
+
+## Optional 10-Minute ClawPilot Module
+- 00:50-01:00: ClawPilot expense workflow simulation
 
 ## 0) Why AI in Your Daily Sales Work
 
@@ -45,7 +47,7 @@ Frame proposals with value hypotheses, risks, and measurable next steps.
 Use plain language and avoid technical jargon unless explicitly requested.
 For each output, include a clear CTA and owner.
 
-### Exercise (12 min)
+### Exercise (10 min)
 1. Paste your profile into your Copilot instructions.
 2. Run one prompt before and after personalization.
 3. Compare relevance for your account.
@@ -113,7 +115,7 @@ Notes:
 - Action tracker generation from meetings
 - Expense preparation and admin workflow acceleration
 
-### Exercise: Monthly Expense Preparation (7 min)
+### Exercise: Monthly Expense Preparation (Optional 10 min module)
 1. Provide sample receipts and categories.
 2. Ask ClawPilot to normalize and classify.
 3. Ask for missing fields and policy checks.

@@ -51,13 +51,18 @@
       width: 100%;
       height: 100%;
       animation: fade 420ms ease;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.2rem;
+      padding-bottom: 4vh;
     }
-    .slide.active { display: grid; }
+    .slide.active { display: flex; }
     @keyframes fade {
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
     }
     .hero {
+      display: grid !important;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 2vw;
       align-items: center;
@@ -98,9 +103,10 @@
       letter-spacing: 0.06em;
     }
     .two-col {
+      display: grid !important;
       grid-template-columns: 1fr 1fr;
       gap: 1.4vw;
-      align-items: stretch;
+      align-items: start;
     }
     .panel {
       background: var(--card);
@@ -145,23 +151,30 @@
     .timeline {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0.7vw;
+      gap: 0.9vw;
+      align-items: start;
     }
     .step {
       background: #ffffff;
       border: 1px solid rgba(7,59,76,0.18);
-      border-radius: 16px;
-      padding: 0.9rem;
-      min-height: 180px;
+      border-radius: 20px;
+      padding: 1.1rem 1rem;
       color: var(--ink);
       box-shadow: 0 8px 18px rgba(33,33,33,0.11);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
     }
-    .step strong {
-      display: inline-block;
-      margin-bottom: 0.4rem;
+    .step-icon { font-size: 2.4rem; line-height: 1; }
+    .step-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--accent-2);
-      font-size: 1.05rem;
     }
+    .step-title { font-weight: 700; font-size: 1rem; color: #073b4c; }
+    .step-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.4; }
     .footer {
       position: absolute;
       left: 3vw;
@@ -237,137 +250,210 @@
     <div class="progress"><div id="bar"></div></div>
 
     <section class="slide hero active">
-      <div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:0.8rem;">
         <h1 class="title">AI in the Field<br>Copilot + Cowork + ClawPilot</h1>
-        <div class="tag">1h to 1h15 live interactive workshop</div>
-        <p style="margin-top:1rem;max-width:70ch;">Tonight we turn repetitive work into a performance system. Human judgment stays in control. AI removes the friction.</p>
-        <div class="visual-wrap hero-visual">
-          <img class="visual" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating around laptops">
-          <span class="visual-chip">from manual grind to launch mode</span>
+        <div class="tag">1h to 1h15 · live interactive workshop</div>
+        <p style="margin:0;max-width:54ch;color:#355070;">Repetitive work becomes a performance system.<br>Human judgment stays in control. AI removes the friction.</p>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <span class="visual-chip">✦ SE track</span>
+          <span class="visual-chip">✦ SSP track</span>
+          <span class="visual-chip">✦ ClawPilot</span>
         </div>
-        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
       </div>
-      <div class="ted-circle"><span>GO</span></div>
+      <div style="position:relative;">
+        <img style="width:100%;max-height:74vh;object-fit:cover;border-radius:24px;box-shadow:0 20px 48px rgba(33,33,33,0.2);" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating around laptops">
+        <div style="position:absolute;bottom:14px;left:16px;background:rgba(242,95,76,0.92);color:#fff;padding:0.4rem 1rem;border-radius:999px;font-weight:700;font-size:1.1rem;">Let's go 🚀</div>
+        <div class="photo-credit" style="position:absolute;bottom:-18px;right:0;">Photo: Unsplash (free-use)</div>
+      </div>
     </section>
 
     <section class="slide two-col">
-      <div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
         <h2>Step 0: Why AI Daily</h2>
         <div class="cards">
           <article class="card">
+            <div style="font-size:1.8rem;">⏱️</div>
             <div class="kpi">-30%</div>
             <div>Time on first drafts</div>
           </article>
           <article class="card">
+            <div style="font-size:1.8rem;">📈</div>
             <div class="kpi">+40%</div>
             <div>Output consistency</div>
           </article>
           <article class="card">
+            <div style="font-size:1.8rem;">⭐</div>
             <div class="kpi">+1 level</div>
             <div>Meeting readiness</div>
           </article>
         </div>
+        <img style="width:100%;border-radius:16px;object-fit:cover;max-height:24vh;box-shadow:0 10px 22px rgba(33,33,33,0.18);" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Speaker presenting to an audience">
+        <div class="photo-credit">Photo: Unsplash (free-use)</div>
       </div>
       <div class="panel">
-        <h3>Live moment</h3>
+        <h3>🎬 Live moment</h3>
         <ul>
-          <li>Do a recap email manually in 3 minutes.</li>
-          <li>Redo it with Copilot in 45 seconds.</li>
-          <li>Ask audience: what changed in quality and confidence?</li>
+          <li>Write a recap email manually — 3 minutes.</li>
+          <li>Redo it with Copilot — 45 seconds.</li>
+          <li>Ask: what changed in quality and confidence?</li>
         </ul>
-        <p class="fun">Small wow moment: ask for a "bad version" first, then improve it together.</p>
-        <div class="visual-wrap">
-          <img class="visual" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Speaker presenting to an audience">
+        <p class="fun" style="margin-top:0.8rem;">Pro tip: ask for a "bad version" first,<br>then improve it live with the audience.</p>
+        <div style="margin-top:1rem;background:rgba(46,196,182,0.12);border-radius:14px;padding:0.8rem 1rem;border-left:4px solid var(--accent-3);">
+          <strong>Rule #1</strong><br>Human owns judgment. AI removes the friction.
         </div>
-        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
       </div>
     </section>
 
     <section class="slide">
       <h2>Step 1 + 2: Personalization Power</h2>
       <div class="timeline">
-        <div class="step"><strong>1</strong><div>Define role DNA: SE or SSP</div></div>
-        <div class="step"><strong>2</strong><div>Set output formats and quality bars</div></div>
-        <div class="step"><strong>3</strong><div>Build Cowork template for handoff</div></div>
-        <div class="step"><strong>4</strong><div>Run before/after prompt duel live</div></div>
-        <div class="step"><strong>5</strong><div>Audience applies to their real account</div></div>
+        <div class="step">
+          <div class="step-icon">🧬</div>
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Define your role DNA</div>
+          <div class="step-desc">SE or SSP — tell Copilot who you are and how you think.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">📐</div>
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Set output standards</div>
+          <div class="step-desc">Format, brevity, tone. Build your quality bar once and reuse it.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">🤝</div>
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Build the Cowork template</div>
+          <div class="step-desc">Context + Objective + Constraints + Output format + Reviewer persona.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">⚡</div>
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Live prompt duel</div>
+          <div class="step-desc">Same prompt, before vs after personalization. Audience judges the output.</div>
+        </div>
+        <div class="step">
+          <div class="step-icon">🎯</div>
+          <div class="step-num">Step 5</div>
+          <div class="step-title">Apply to your real account</div>
+          <div class="step-desc">Run your personalized prompt on an actual account — right now.</div>
+        </div>
       </div>
     </section>
 
     <section class="slide two-col">
-      <div class="panel">
-        <h3>Track A: SE (Demo Sprint)</h3>
+      <div class="panel" style="border-top:5px solid #2196f3;">
+        <h3>🔧 Track A: Solution Engineer</h3>
         <ul>
-          <li>Requirements to architecture options</li>
-          <li>Trade-off matrix: security, cost, scale</li>
-          <li>Log triage ranked by probability</li>
-          <li>IaC scaffold + validation checklist</li>
+          <li>📋 Requirements → architecture options</li>
+          <li>⚖️ Trade-off matrix: security, cost, scale</li>
+          <li>🩺 Log triage ranked by probability</li>
+          <li>🏗️ IaC scaffold + validation checklist</li>
         </ul>
-        <p class="fun-note">SE mode: "show me risks before we ship"</p>
+        <div style="margin-top:0.8rem;background:#e3f2fd;border-radius:12px;padding:0.65rem 0.9rem;font-style:italic;color:#1565c0;">"Show me the risks before we ship."</div>
+        <img style="width:100%;border-radius:12px;margin-top:0.9rem;max-height:20vh;object-fit:cover;" src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=900&q=75" alt="Developer working on a technical architecture">
+        <div class="photo-credit">Photo: Unsplash (free-use)</div>
       </div>
-      <div class="panel">
-        <h3>Track B: SSP (Demo Sprint)</h3>
+      <div class="panel" style="border-top:5px solid var(--accent);">
+        <h3>💼 Track B: Sales Specialist</h3>
         <ul>
-          <li>Account signals to value narrative</li>
-          <li>Proposal skeleton with milestones</li>
-          <li>Objection coaching cards</li>
-          <li>Persona-based follow-up sequence</li>
+          <li>📊 Account signals → value narrative</li>
+          <li>📄 Proposal skeleton with milestones</li>
+          <li>🥊 Objection coaching cards</li>
+          <li>✉️ Persona-based follow-up sequence</li>
         </ul>
-        <p class="fun-note">SSP mode: "make value obvious in 30 seconds"</p>
+        <div style="margin-top:0.8rem;background:#fce4ec;border-radius:12px;padding:0.65rem 0.9rem;font-style:italic;color:#b71c1c;">"Make value obvious in 30 seconds."</div>
+        <img style="width:100%;border-radius:12px;margin-top:0.9rem;max-height:20vh;object-fit:cover;" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=75" alt="Sales team in a meeting">
+        <div class="photo-credit">Photo: Unsplash (free-use)</div>
       </div>
     </section>
 
     <section class="slide two-col">
-      <div>
-        <h2>SE + SSP = Better Together</h2>
-        <p>When business narrative and technical credibility move together, the deal velocity changes.</p>
-        <div class="visual-wrap">
-          <span class="visual-chip">SE asks better technical questions</span>
-          <span class="visual-chip">SSP sharpens the outcome story</span>
-          <span class="visual-chip">Shared prompts reduce rework</span>
+      <div style="display:flex;flex-direction:column;gap:1rem;justify-content:flex-start;">
+        <h2>SE + SSP = Better Together 🤜🤛</h2>
+        <p style="color:#355070;margin:0;">Business narrative + technical credibility = deal velocity.</p>
+        <div style="display:flex;flex-direction:column;gap:0.6rem;">
+          <div style="background:#e8f5e9;border-radius:14px;padding:0.75rem 1rem;">
+            <strong>🔧 SE asks:</strong> What's the architecture risk and how do we mitigate it?
+          </div>
+          <div style="background:#fff3e0;border-radius:14px;padding:0.75rem 1rem;">
+            <strong>💼 SSP adds:</strong> What's the business outcome and why now?
+          </div>
+          <div style="background:#e3f2fd;border-radius:14px;padding:0.75rem 1rem;">
+            <strong>🤖 Together:</strong> Shared prompts, less rework, faster customer answers.
+          </div>
         </div>
       </div>
       <div>
-        <img class="visual" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating in a workshop room">
-        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
+        <img style="width:100%;border-radius:20px;object-fit:cover;max-height:62vh;box-shadow:0 16px 36px rgba(33,33,33,0.2);" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating in a workshop room">
+        <div class="photo-credit">Photo: Unsplash (free-use)</div>
       </div>
     </section>
 
     <section class="slide two-col">
-      <div>
-        <h2>Step 4: What is ClawPilot?</h2>
-        <p>Task-oriented AI execution for structured workflows and operational speed.</p>
-        <div class="badge">Expense prep</div>
-        <div class="badge">Action trackers</div>
-        <div class="badge">Admin acceleration</div>
-      </div>
-      <div class="panel">
-        <h3>Live use case</h3>
-        <ul>
-          <li>Input: receipts + categories</li>
-          <li>Output: normalized draft + missing field flags</li>
-          <li>Human validation before final submit</li>
-        </ul>
-        <div class="visual-wrap">
-          <img class="visual" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="Business payment and expense management concept">
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <h2>Step 4: What is ClawPilot? 🦾</h2>
+        <p style="color:#355070;margin:0;">Task-oriented AI execution for structured, repetitive operational workflows.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+          <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">🧾 Expense prep</div>
+          <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">✅ Action trackers</div>
+          <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">📬 Follow-up packs</div>
+          <div class="badge" style="padding:0.65rem 0.8rem;text-align:center;font-weight:700;">⚙️ Admin tasks</div>
         </div>
-        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
+        <img style="width:100%;border-radius:16px;object-fit:cover;max-height:28vh;box-shadow:0 10px 22px rgba(33,33,33,0.18);" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="Business payment and expense management">
+        <div class="photo-credit">Photo: Unsplash (free-use)</div>
+      </div>
+      <div class="panel">
+        <h3>🎬 Live demo: Expense workflow</h3>
+        <div style="display:flex;flex-direction:column;gap:0.7rem;margin-top:0.4rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.7rem;">
+            <span style="font-size:1.5rem;">1️⃣</span>
+            <div><strong>Input receipts</strong><br><span style="color:var(--muted);font-size:0.9rem;">Dates, merchants, amounts, categories</span></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.7rem;">
+            <span style="font-size:1.5rem;">2️⃣</span>
+            <div><strong>ClawPilot normalizes</strong><br><span style="color:var(--muted);font-size:0.9rem;">Classifies, validates, flags missing fields</span></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.7rem;">
+            <span style="font-size:1.5rem;">3️⃣</span>
+            <div><strong>Review the draft</strong><br><span style="color:var(--muted);font-size:0.9rem;">Submission-ready — you validate before sending</span></div>
+          </div>
+        </div>
+        <div style="margin-top:1rem;background:rgba(46,196,182,0.15);border-radius:12px;padding:0.7rem 0.9rem;border-left:4px solid var(--accent-3);">
+          You own the submit button. Always.
+        </div>
       </div>
     </section>
 
     <section class="slide two-col">
       <div class="panel">
-        <h3>Interactive close</h3>
-        <ul>
-          <li>Each person picks one task to automate this week</li>
-          <li>Set baseline time vs AI-assisted time</li>
-          <li>Commit to one prompt improvement</li>
-        </ul>
+        <h3>🎯 Your commitment right now</h3>
+        <div style="display:flex;flex-direction:column;gap:0.8rem;margin-top:0.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+            <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
+            <span>Pick <strong>one weekly task</strong> to automate starting tomorrow.</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+            <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
+            <span>Measure <strong>time before vs after</strong> AI assistance.</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:0.6rem;">
+            <span style="font-size:1.3rem;flex-shrink:0;">☐</span>
+            <span>Share <strong>one prompt improvement</strong> with the team this week.</span>
+          </div>
+        </div>
+        <div style="margin-top:1.2rem;background:#fff3e0;border-radius:14px;padding:0.8rem 1rem;">
+          📅 Follow-up: 15-min team AI standup in 2 weeks.
+        </div>
       </div>
-      <div>
-        <h2>Final challenge</h2>
-        <p class="title" style="font-size:clamp(2rem,4.6vw,4.2rem);">MAKE TOMORROW 20% FASTER</p>
-        <p class="fun">If your prompt is boring, your output is boring.</p>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:1rem;">
+        <h2 style="margin:0;">Final challenge 🚀</h2>
+        <p class="title" style="font-size:clamp(2rem,4.6vw,4.2rem);margin:0;color:#1b4332;">MAKE TOMORROW 20% FASTER</p>
+        <p class="fun" style="font-size:1.1rem;">If your prompt is boring,<br>your output is boring.</p>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span class="visual-chip">🧠 personalized</span>
+          <span class="visual-chip">🤝 shared</span>
+          <span class="visual-chip">🔁 improved weekly</span>
+        </div>
       </div>
     </section>
 

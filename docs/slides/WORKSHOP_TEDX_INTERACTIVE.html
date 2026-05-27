@@ -62,11 +62,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
     .hero {
-      display: grid !important;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 2vw;
       align-items: center;
     }
+    .slide.active.hero { display: grid; }
     .title {
       font-size: clamp(2rem, 4.2vw, 4.3rem);
       line-height: 1.04;
@@ -103,11 +103,11 @@
       letter-spacing: 0.06em;
     }
     .two-col {
-      display: grid !important;
       grid-template-columns: 1fr 1fr;
       gap: 1.4vw;
       align-items: start;
     }
+    .slide.active.two-col { display: grid; }
     .panel {
       background: var(--card);
       color: var(--ink);

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+  <title id="t">AI rocket launching</title>
+  <desc id="d">Cartoon rocket with analytics icons and clouds</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffb703"/>
+      <stop offset="1" stop-color="#fb8500"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" fill="url(#bg)" rx="28"/>
+  <circle cx="80" cy="80" r="26" fill="#e5e7eb" opacity="0.6"/>
+  <circle cx="140" cy="130" r="18" fill="#e5e7eb" opacity="0.5"/>
+  <circle cx="520" cy="70" r="20" fill="#e5e7eb" opacity="0.55"/>
+  <g transform="translate(290 220) rotate(-22)">
+    <path d="M0 -140 C35 -110 55 -65 55 0 L-55 0 C-55 -65 -35 -110 0 -140Z" fill="#e11d48"/>
+    <rect x="-24" y="-90" width="48" height="66" rx="20" fill="#f8fafc"/>
+    <circle cx="0" cy="-58" r="12" fill="#38bdf8"/>
+    <path d="M-55 -6 L-85 30 L-55 32Z" fill="#60a5fa"/>
+    <path d="M55 -6 L85 30 L55 32Z" fill="#60a5fa"/>
+    <path d="M0 0 C-10 30 -10 58 0 80 C10 58 10 30 0 0Z" fill="url(#flame)"/>
+  </g>
+  <g fill="#34d399" opacity="0.9">
+    <rect x="44" y="286" width="100" height="60" rx="12"/>
+    <rect x="166" y="286" width="100" height="60" rx="12"/>
+    <rect x="288" y="286" width="100" height="60" rx="12"/>
+  </g>
+  <g fill="#022c22" font-family="Trebuchet MS, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="94" y="324">Draft</text>
+    <text x="216" y="324">Review</text>
+    <text x="338" y="324">Win</text>
+  </g>
+</svg>

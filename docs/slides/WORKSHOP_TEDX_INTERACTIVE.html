@@ -179,6 +179,39 @@
       color: var(--accent-3);
       font-weight: 700;
     }
+    .visual-wrap {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .visual {
+      width: 100%;
+      border-radius: 16px;
+      border: 2px solid rgba(255,255,255,0.22);
+      box-shadow: 0 16px 28px rgba(0,0,0,0.35);
+      transition: transform 260ms ease;
+    }
+    .visual:hover {
+      transform: scale(1.015) rotate(-0.4deg);
+    }
+    .visual-chip {
+      font-size: 0.85rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.24);
+    }
+    .hero-visual {
+      margin-top: 1.2rem;
+      max-width: 540px;
+    }
+    .fun-note {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      color: #fef3c7;
+    }
     @media (max-width: 900px) {
       .hero, .two-col { grid-template-columns: 1fr; }
       .cards { grid-template-columns: 1fr; }
@@ -197,6 +230,10 @@
         <h1 class="title">AI in the Field<br>Copilot + Cowork + ClawPilot</h1>
         <div class="tag">1h to 1h15 live interactive workshop</div>
         <p style="margin-top:1rem;max-width:70ch;">Tonight we turn repetitive work into a performance system. Human judgment stays in control. AI removes the friction.</p>
+        <div class="visual-wrap hero-visual">
+          <img class="visual" src="images/ai-rocket.svg" alt="Cartoon AI rocket launching from draft to win">
+          <span class="visual-chip">from manual grind to launch mode</span>
+        </div>
       </div>
       <div class="ted-circle"><span>GO</span></div>
     </section>
@@ -227,6 +264,9 @@
           <li>Ask audience: what changed in quality and confidence?</li>
         </ul>
         <p class="fun">Small wow moment: ask for a "bad version" first, then improve it together.</p>
+        <div class="visual-wrap">
+          <img class="visual" src="images/prompt-battle.svg" alt="Funny before and after prompt duel">
+        </div>
       </div>
     </section>
 
@@ -250,6 +290,7 @@
           <li>Log triage ranked by probability</li>
           <li>IaC scaffold + validation checklist</li>
         </ul>
+        <p class="fun-note">SE mode: "show me risks before we ship"</p>
       </div>
       <div class="panel">
         <h3>Track B: SSP (Demo Sprint)</h3>
@@ -259,6 +300,22 @@
           <li>Objection coaching cards</li>
           <li>Persona-based follow-up sequence</li>
         </ul>
+        <p class="fun-note">SSP mode: "make value obvious in 30 seconds"</p>
+      </div>
+    </section>
+
+    <section class="slide two-col">
+      <div>
+        <h2>SE + SSP = Better Together</h2>
+        <p>When business narrative and technical credibility move together, the deal velocity changes.</p>
+        <div class="visual-wrap">
+          <span class="visual-chip">SE asks better technical questions</span>
+          <span class="visual-chip">SSP sharpens the outcome story</span>
+          <span class="visual-chip">Shared prompts reduce rework</span>
+        </div>
+      </div>
+      <div>
+        <img class="visual" src="images/se-ssp-showdown.svg" alt="Playful collaboration illustration for SE and SSP">
       </div>
     </section>
 
@@ -277,6 +334,9 @@
           <li>Output: normalized draft + missing field flags</li>
           <li>Human validation before final submit</li>
         </ul>
+        <div class="visual-wrap">
+          <img class="visual" src="images/claw-expense-fun.svg" alt="Playful expense workflow from receipts to ready draft">
+        </div>
       </div>
     </section>
 

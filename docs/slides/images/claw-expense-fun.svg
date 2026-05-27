@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" role="img" aria-labelledby="t d">
+  <title id="t">Expense workflow fun</title>
+  <desc id="d">Playful expense process from receipt pile to approved draft</desc>
+  <rect width="700" height="420" rx="28" fill="#111827"/>
+  <rect x="30" y="60" width="180" height="300" rx="18" fill="#7c2d12"/>
+  <rect x="260" y="60" width="180" height="300" rx="18" fill="#0f766e"/>
+  <rect x="490" y="60" width="180" height="300" rx="18" fill="#14532d"/>
+  <text x="120" y="98" text-anchor="middle" font-family="Impact" font-size="22" fill="#fed7aa">Receipts</text>
+  <text x="350" y="98" text-anchor="middle" font-family="Impact" font-size="22" fill="#99f6e4">ClawPilot</text>
+  <text x="580" y="98" text-anchor="middle" font-family="Impact" font-size="22" fill="#bbf7d0">Ready Draft</text>
+  <g fill="#fff7ed" font-family="Trebuchet MS" font-size="16">
+    <rect x="56" y="126" width="128" height="42" rx="8"/>
+    <rect x="56" y="178" width="128" height="42" rx="8"/>
+    <rect x="56" y="230" width="128" height="42" rx="8"/>
+    <text x="120" y="152" text-anchor="middle" fill="#7c2d12">Taxi</text>
+    <text x="120" y="204" text-anchor="middle" fill="#7c2d12">Hotel</text>
+    <text x="120" y="256" text-anchor="middle" fill="#7c2d12">Meal</text>
+  </g>
+  <g fill="#042f2e" font-family="Trebuchet MS" font-size="16">
+    <rect x="286" y="126" width="128" height="42" rx="8" fill="#ccfbf1"/>
+    <rect x="286" y="178" width="128" height="42" rx="8" fill="#ccfbf1"/>
+    <rect x="286" y="230" width="128" height="42" rx="8" fill="#ccfbf1"/>
+    <text x="350" y="152" text-anchor="middle">Categorize</text>
+    <text x="350" y="204" text-anchor="middle">Validate</text>
+    <text x="350" y="256" text-anchor="middle">Flag gaps</text>
+  </g>
+  <g fill="#052e16" font-family="Trebuchet MS" font-size="16">
+    <rect x="516" y="126" width="128" height="42" rx="8" fill="#dcfce7"/>
+    <rect x="516" y="178" width="128" height="42" rx="8" fill="#dcfce7"/>
+    <rect x="516" y="230" width="128" height="42" rx="8" fill="#dcfce7"/>
+    <text x="580" y="152" text-anchor="middle">Complete</text>
+    <text x="580" y="204" text-anchor="middle">Policy-safe</text>
+    <text x="580" y="256" text-anchor="middle">Submit-ready</text>
+  </g>
+  <path d="M210 210 L252 210" stroke="#fcd34d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M440 210 L482 210" stroke="#86efac" stroke-width="8" stroke-linecap="round"/>
+</svg>

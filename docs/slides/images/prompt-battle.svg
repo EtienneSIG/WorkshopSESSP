@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="t d">
+  <title id="t">Prompt battle</title>
+  <desc id="d">Funny duel between weak and strong prompts</desc>
+  <rect width="600" height="420" rx="28" fill="#111827"/>
+  <rect x="24" y="24" width="552" height="372" rx="24" fill="#1f2937"/>
+  <text x="300" y="64" text-anchor="middle" fill="#fef3c7" font-size="28" font-family="Impact, sans-serif">PROMPT DUEL</text>
+  <g>
+    <rect x="60" y="100" width="220" height="240" rx="20" fill="#7f1d1d"/>
+    <text x="170" y="140" text-anchor="middle" fill="#fecaca" font-size="22" font-family="Trebuchet MS">Before</text>
+    <text x="170" y="182" text-anchor="middle" fill="#fecaca" font-size="18" font-family="Trebuchet MS">"Make something"</text>
+    <text x="170" y="222" text-anchor="middle" fill="#fee2e2" font-size="56" font-family="Impact">meh</text>
+    <circle cx="170" cy="278" r="24" fill="#ef4444"/>
+    <text x="170" y="285" text-anchor="middle" fill="#fff" font-size="24">?</text>
+  </g>
+  <g>
+    <rect x="320" y="100" width="220" height="240" rx="20" fill="#064e3b"/>
+    <text x="430" y="140" text-anchor="middle" fill="#bbf7d0" font-size="22" font-family="Trebuchet MS">After</text>
+    <text x="430" y="182" text-anchor="middle" fill="#bbf7d0" font-size="18" font-family="Trebuchet MS">Context + Goal + Format</text>
+    <text x="430" y="222" text-anchor="middle" fill="#dcfce7" font-size="56" font-family="Impact">wow</text>
+    <circle cx="430" cy="278" r="24" fill="#22c55e"/>
+    <text x="430" y="285" text-anchor="middle" fill="#fff" font-size="24">!</text>
+  </g>
+  <path d="M285 220 L315 220" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+</svg>

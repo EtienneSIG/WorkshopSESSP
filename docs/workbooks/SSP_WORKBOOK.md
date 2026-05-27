@@ -47,16 +47,35 @@ Frame proposals with value hypotheses, risks, and measurable next steps.
 Use plain language and avoid technical jargon unless explicitly requested.
 For each output, include a clear CTA and owner.
 
+### Need Specification Is Central (Use This Formula)
+Before every prompt, specify your need with this structure:
+- Context: account situation, buying stage, stakeholder persona
+- Objective: expected business outcome or next action
+- Constraints: budget, timeline, competition, legal/compliance boundaries
+- Output format: email, value story, proposal table, objection card
+
+Prompt frame you can reuse:
+Context: [insert context]
+Objective: [insert expected result]
+Constraints: [insert limits]
+Output format: [insert format]
+
+Rule to remember:
+- Vague ask in -> vague answer out.
+- Precise ask in -> actionable answer out.
+
 ### Exercise (10 min)
 1. Paste your profile into your Copilot instructions.
 2. Run one prompt before and after personalization.
 3. Compare relevance for your account.
 4. Improve your instructions with one concrete rule after first run.
+5. Rewrite the same prompt using the need-specification formula and compare quality.
 
 ### Quality Checklist
 - Is the message tailored by stakeholder persona?
 - Is business value explicit and measurable?
 - Is the call-to-action clear?
+- Did I clearly specify context, objective, constraints, and output format?
 
 ## 2) Personalize Copilot Cowork for SSP
 

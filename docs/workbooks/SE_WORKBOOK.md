@@ -86,12 +86,29 @@ Rule to remember:
 - Output format: decision matrix + recommendation
 - Reviewer persona: platform architect
 
+### Skill-Based Cowork Example (SE + SSP)
+Apply explicit skills in sequence to avoid vague collaboration:
+
+1. SSP skill step (input producer):
+	- Skills: discovery synthesis, value framing, objection capture
+	- Deliverable: account brief with priorities and blockers
+2. SE skill step (technical translator):
+	- Skills: architecture optioning, risk analysis, implementation design
+	- Deliverable: option matrix with trade-offs and assumptions
+3. Joint integration step:
+	- Merge business narrative + technical recommendation in one response
+4. Review step:
+	- Validate feasibility, risks, owner, and timeline
+5. Final step:
+	- Produce customer-ready output in requested format
+
 ### Exercise (10 min)
 1. Work in pair mode with an SSP participant.
 2. SSP writes business objectives and objections.
 3. You convert that into technical options with rationale.
 4. SSP challenges assumptions. You revise.
 5. Finalize one customer-ready answer in under 150 words.
+6. Identify which skill step added the most value and why.
 
 ## 3) Daily Practical SE Use Cases
 

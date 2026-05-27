@@ -67,6 +67,22 @@ Show how AI collaboration patterns improve team throughput.
    - SSP converts output into customer narrative
 4. Show versioning of prompts in a shared repo/folder.
 
+### Skill-Based Cowork Demo (Step-by-Step)
+Use explicit role skills to improve handoff quality.
+
+1. SSP skill activation:
+   - Skill focus: account discovery synthesis, value narrative, objection mapping
+   - Output: one-page opportunity brief with business hypotheses
+2. SE skill activation:
+   - Skill focus: architecture optioning, risk/constraint analysis, implementation path
+   - Output: technical options table with trade-offs and assumptions
+3. Joint Cowork merge:
+   - Combine SSP narrative + SE options into one decision-ready recommendation
+4. Reviewer pass:
+   - Reviewer checks: clarity, feasibility, risk coverage, next action owner
+5. Final deliverable:
+   - Customer-ready summary in agreed format (email, table, or executive brief)
+
 ### Exercise (2 min)
 Pairs create one shared prompt template and run it on a mock account.
 

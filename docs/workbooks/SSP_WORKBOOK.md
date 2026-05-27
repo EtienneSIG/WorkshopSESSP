@@ -86,12 +86,29 @@ Rule to remember:
 - Output format: value story + technical validation questions
 - Reviewer persona: account team lead
 
+### Skill-Based Cowork Example (SSP + SE)
+Apply explicit skills in sequence to avoid vague collaboration:
+
+1. SSP skill step (business lead):
+	- Skills: opportunity synthesis, persona messaging, objection handling
+	- Deliverable: concise value narrative + stakeholder map
+2. SE skill step (technical validation):
+	- Skills: architecture options, risk mitigation, feasibility checks
+	- Deliverable: validated options with constraints and assumptions
+3. Joint integration step:
+	- Merge business value + technical credibility into one recommendation
+4. Review step:
+	- Validate relevance, risk coverage, owner, and timeline
+5. Final step:
+	- Produce customer-ready output in requested format
+
 ### Exercise (10 min)
 1. Work in pair mode with an SE participant.
 2. You prepare value narrative and objections.
 3. SE maps feasibility and technical options.
 4. You refine a customer-facing story.
 5. Finalize one customer-ready answer in under 150 words.
+6. Identify which skill step added the most value and why.
 
 ## 3) Daily Practical SSP Use Cases
 

@@ -6,21 +6,21 @@
   <title>AI in the Field - Interactive Workshop Slides</title>
   <style>
     :root {
-      --bg: #111111;
-      --card: #f4efe6;
-      --ink: #181818;
-      --accent: #e53935;
-      --accent-2: #ffb300;
-      --accent-3: #26a69a;
-      --muted: #5f5a54;
+      --bg: #fff7ea;
+      --card: #fffdf8;
+      --ink: #202124;
+      --accent: #f25f4c;
+      --accent-2: #ff9f1c;
+      --accent-3: #2ec4b6;
+      --muted: #5f6770;
       --white: #ffffff;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-      background: radial-gradient(circle at 15% 20%, #2a2a2a 0%, var(--bg) 45%), linear-gradient(120deg, #111 0%, #1f1f1f 100%);
-      color: var(--white);
+      background: radial-gradient(circle at 12% 16%, #ffe0b2 0%, transparent 34%), radial-gradient(circle at 88% 22%, #b2f5ea 0%, transparent 28%), linear-gradient(125deg, #fff8ef 0%, #f4fbff 55%, #fef4ff 100%);
+      color: var(--ink);
       overflow: hidden;
     }
     .stage {
@@ -35,7 +35,7 @@
       right: 3vw;
       top: 1.2vh;
       height: 6px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(40,40,40,0.15);
       border-radius: 999px;
       overflow: hidden;
       z-index: 10;
@@ -69,6 +69,7 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      color: #1b4332;
     }
     .tag {
       display: inline-block;
@@ -84,11 +85,11 @@
       width: min(70vh, 70vw);
       max-width: 520px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #ff7961, var(--accent));
+      background: radial-gradient(circle at 30% 20%, #ffcf70, var(--accent));
       display: grid;
       place-items: center;
       justify-self: center;
-      box-shadow: 0 24px 60px rgba(229,57,53,0.35);
+      box-shadow: 0 24px 60px rgba(242,95,76,0.28);
     }
     .ted-circle span {
       font-family: Impact, sans-serif;
@@ -106,12 +107,13 @@
       color: var(--ink);
       border-radius: 20px;
       padding: 1.25rem 1.3rem;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 12px 24px rgba(33,33,33,0.14);
+      border: 1px solid rgba(0,0,0,0.07);
     }
     h2 {
       margin: 0 0 0.8rem;
       font-size: clamp(1.5rem, 2.8vw, 2.4rem);
-      color: var(--white);
+      color: #073b4c;
     }
     .panel h3 {
       margin: 0 0 0.6rem;
@@ -127,11 +129,12 @@
       gap: 1vw;
     }
     .card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.76);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 18px;
       padding: 1rem;
-      backdrop-filter: blur(4px);
+      color: var(--ink);
+      backdrop-filter: blur(3px);
     }
     .kpi {
       font-size: 2.2rem;
@@ -145,11 +148,13 @@
       gap: 0.7vw;
     }
     .step {
-      background: #1f1f1f;
-      border: 2px solid rgba(255,255,255,0.12);
+      background: #ffffff;
+      border: 1px solid rgba(7,59,76,0.18);
       border-radius: 16px;
       padding: 0.9rem;
       min-height: 180px;
+      color: var(--ink);
+      box-shadow: 0 8px 18px rgba(33,33,33,0.11);
     }
     .step strong {
       display: inline-block;
@@ -165,10 +170,11 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.85);
+      color: rgba(32,33,36,0.82);
     }
     .badge {
-      background: rgba(255,255,255,0.16);
+      background: rgba(46,196,182,0.22);
+      border: 1px solid rgba(7,59,76,0.2);
       padding: 0.3rem 0.65rem;
       border-radius: 999px;
       margin-right: 0.4rem;
@@ -189,8 +195,8 @@
     .visual {
       width: 100%;
       border-radius: 16px;
-      border: 2px solid rgba(255,255,255,0.22);
-      box-shadow: 0 16px 28px rgba(0,0,0,0.35);
+      border: 2px solid rgba(7,59,76,0.15);
+      box-shadow: 0 14px 24px rgba(33,33,33,0.22);
       transition: transform 260ms ease;
     }
     .visual:hover {
@@ -200,8 +206,8 @@
       font-size: 0.85rem;
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.16);
-      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(7,59,76,0.24);
     }
     .hero-visual {
       margin-top: 1.2rem;
@@ -210,7 +216,12 @@
     .fun-note {
       margin-top: 0.8rem;
       font-size: 0.95rem;
-      color: #fef3c7;
+      color: #355070;
+    }
+    .photo-credit {
+      font-size: 0.75rem;
+      color: #55606b;
+      margin-top: 0.5rem;
     }
     @media (max-width: 900px) {
       .hero, .two-col { grid-template-columns: 1fr; }
@@ -231,9 +242,10 @@
         <div class="tag">1h to 1h15 live interactive workshop</div>
         <p style="margin-top:1rem;max-width:70ch;">Tonight we turn repetitive work into a performance system. Human judgment stays in control. AI removes the friction.</p>
         <div class="visual-wrap hero-visual">
-          <img class="visual" src="images/ai-rocket.svg" alt="Cartoon AI rocket launching from draft to win">
+          <img class="visual" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating around laptops">
           <span class="visual-chip">from manual grind to launch mode</span>
         </div>
+        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
       </div>
       <div class="ted-circle"><span>GO</span></div>
     </section>
@@ -265,8 +277,9 @@
         </ul>
         <p class="fun">Small wow moment: ask for a "bad version" first, then improve it together.</p>
         <div class="visual-wrap">
-          <img class="visual" src="images/prompt-battle.svg" alt="Funny before and after prompt duel">
+          <img class="visual" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Speaker presenting to an audience">
         </div>
+        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
       </div>
     </section>
 
@@ -315,7 +328,8 @@
         </div>
       </div>
       <div>
-        <img class="visual" src="images/se-ssp-showdown.svg" alt="Playful collaboration illustration for SE and SSP">
+        <img class="visual" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80" alt="Team collaborating in a workshop room">
+        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
       </div>
     </section>
 
@@ -335,8 +349,9 @@
           <li>Human validation before final submit</li>
         </ul>
         <div class="visual-wrap">
-          <img class="visual" src="images/claw-expense-fun.svg" alt="Playful expense workflow from receipts to ready draft">
+          <img class="visual" src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80" alt="Business payment and expense management concept">
         </div>
+        <div class="photo-credit">Photo source: Unsplash (free-use license)</div>
       </div>
     </section>
 

@@ -42,6 +42,9 @@ Detailed activities and prompts are in [docs/PROMPT_LIBRARY.md](docs/PROMPT_LIBR
 - [README.md](README.md): workshop overview
 - [docs/WORKSHOP_FACILITATOR_RUNBOOK.md](docs/WORKSHOP_FACILITATOR_RUNBOOK.md): minute-by-minute workshop flow
 - [docs/PROMPT_LIBRARY.md](docs/PROMPT_LIBRARY.md): ready-to-use prompts for SE and SSP
+- [docs/workbooks/SE_WORKBOOK.md](docs/workbooks/SE_WORKBOOK.md): dedicated workbook for Solution Engineers
+- [docs/workbooks/SSP_WORKBOOK.md](docs/workbooks/SSP_WORKBOOK.md): dedicated workbook for Azure Sales Specialists
+- [docs/slides/WORKSHOP_TEDX_INTERACTIVE.html](docs/slides/WORKSHOP_TEDX_INTERACTIVE.html): interactive TEDx-style workshop slides
 
 ## Optional Follow-Up (Post-Workshop)
 - 30-day adoption challenge

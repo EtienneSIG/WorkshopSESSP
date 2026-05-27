@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in the Field - Interactive Workshop Slides</title>
+  <style>
+    :root {
+      --bg: #111111;
+      --card: #f4efe6;
+      --ink: #181818;
+      --accent: #e53935;
+      --accent-2: #ffb300;
+      --accent-3: #26a69a;
+      --muted: #5f5a54;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 15% 20%, #2a2a2a 0%, var(--bg) 45%), linear-gradient(120deg, #111 0%, #1f1f1f 100%);
+      color: var(--white);
+      overflow: hidden;
+    }
+    .stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding: 2vh 3vw;
+    }
+    .progress {
+      position: absolute;
+      left: 3vw;
+      right: 3vw;
+      top: 1.2vh;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      overflow: hidden;
+      z-index: 10;
+    }
+    .progress > div {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width 300ms ease;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      animation: fade 420ms ease;
+    }
+    .slide.active { display: grid; }
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2vw;
+      align-items: center;
+    }
+    .title {
+      font-size: clamp(2rem, 4.2vw, 4.3rem);
+      line-height: 1.04;
+      margin: 0;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    }
+    .tag {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-weight: 700;
+      background: var(--accent);
+      color: var(--white);
+    }
+    .ted-circle {
+      aspect-ratio: 1 / 1;
+      width: min(70vh, 70vw);
+      max-width: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #ff7961, var(--accent));
+      display: grid;
+      place-items: center;
+      justify-self: center;
+      box-shadow: 0 24px 60px rgba(229,57,53,0.35);
+    }
+    .ted-circle span {
+      font-family: Impact, sans-serif;
+      font-size: clamp(3rem, 9vw, 8rem);
+      color: #fff;
+      letter-spacing: 0.06em;
+    }
+    .two-col {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4vw;
+      align-items: stretch;
+    }
+    .panel {
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 20px;
+      padding: 1.25rem 1.3rem;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    }
+    h2 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+      color: var(--white);
+    }
+    .panel h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.35rem;
+      color: var(--ink);
+      font-family: Cambria, Georgia, serif;
+    }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; line-height: 1.28; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1vw;
+    }
+    .card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 1rem;
+      backdrop-filter: blur(4px);
+    }
+    .kpi {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent-2);
+      margin: 0.2rem 0 0.5rem;
+    }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.7vw;
+    }
+    .step {
+      background: #1f1f1f;
+      border: 2px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 0.9rem;
+      min-height: 180px;
+    }
+    .step strong {
+      display: inline-block;
+      margin-bottom: 0.4rem;
+      color: var(--accent-2);
+      font-size: 1.05rem;
+    }
+    .footer {
+      position: absolute;
+      left: 3vw;
+      right: 3vw;
+      bottom: 1.2vh;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .badge {
+      background: rgba(255,255,255,0.16);
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      margin-right: 0.4rem;
+      display: inline-block;
+    }
+    .fun {
+      font-family: "Comic Sans MS", cursive;
+      color: var(--accent-3);
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .hero, .two-col { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; overflow-y: auto; }
+      .ted-circle { width: 60vw; }
+      .stage { padding-top: 4vh; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="progress"><div id="bar"></div></div>
+
+    <section class="slide hero active">
+      <div>
+        <h1 class="title">AI in the Field<br>Copilot + Cowork + ClawPilot</h1>
+        <div class="tag">1h to 1h15 live interactive workshop</div>
+        <p style="margin-top:1rem;max-width:70ch;">Tonight we turn repetitive work into a performance system. Human judgment stays in control. AI removes the friction.</p>
+      </div>
+      <div class="ted-circle"><span>GO</span></div>
+    </section>
+
+    <section class="slide two-col">
+      <div>
+        <h2>Step 0: Why AI Daily</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="kpi">-30%</div>
+            <div>Time on first drafts</div>
+          </article>
+          <article class="card">
+            <div class="kpi">+40%</div>
+            <div>Output consistency</div>
+          </article>
+          <article class="card">
+            <div class="kpi">+1 level</div>
+            <div>Meeting readiness</div>
+          </article>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Live moment</h3>
+        <ul>
+          <li>Do a recap email manually in 3 minutes.</li>
+          <li>Redo it with Copilot in 45 seconds.</li>
+          <li>Ask audience: what changed in quality and confidence?</li>
+        </ul>
+        <p class="fun">Small wow moment: ask for a "bad version" first, then improve it together.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Step 1 + 2: Personalization Power</h2>
+      <div class="timeline">
+        <div class="step"><strong>1</strong><div>Define role DNA: SE or SSP</div></div>
+        <div class="step"><strong>2</strong><div>Set output formats and quality bars</div></div>
+        <div class="step"><strong>3</strong><div>Build Cowork template for handoff</div></div>
+        <div class="step"><strong>4</strong><div>Run before/after prompt duel live</div></div>
+        <div class="step"><strong>5</strong><div>Audience applies to their real account</div></div>
+      </div>
+    </section>
+
+    <section class="slide two-col">
+      <div class="panel">
+        <h3>Track A: SE (Demo Sprint)</h3>
+        <ul>
+          <li>Requirements to architecture options</li>
+          <li>Trade-off matrix: security, cost, scale</li>
+          <li>Log triage ranked by probability</li>
+          <li>IaC scaffold + validation checklist</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Track B: SSP (Demo Sprint)</h3>
+        <ul>
+          <li>Account signals to value narrative</li>
+          <li>Proposal skeleton with milestones</li>
+          <li>Objection coaching cards</li>
+          <li>Persona-based follow-up sequence</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide two-col">
+      <div>
+        <h2>Step 4: What is ClawPilot?</h2>
+        <p>Task-oriented AI execution for structured workflows and operational speed.</p>
+        <div class="badge">Expense prep</div>
+        <div class="badge">Action trackers</div>
+        <div class="badge">Admin acceleration</div>
+      </div>
+      <div class="panel">
+        <h3>Live use case</h3>
+        <ul>
+          <li>Input: receipts + categories</li>
+          <li>Output: normalized draft + missing field flags</li>
+          <li>Human validation before final submit</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide two-col">
+      <div class="panel">
+        <h3>Interactive close</h3>
+        <ul>
+          <li>Each person picks one task to automate this week</li>
+          <li>Set baseline time vs AI-assisted time</li>
+          <li>Commit to one prompt improvement</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Final challenge</h2>
+        <p class="title" style="font-size:clamp(2rem,4.6vw,4.2rem);">MAKE TOMORROW 20% FASTER</p>
+        <p class="fun">If your prompt is boring, your output is boring.</p>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>Use arrow keys or space to navigate</div>
+      <div id="count"></div>
+    </div>
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const bar = document.getElementById('bar');
+    const count = document.getElementById('count');
+    let index = 0;
+
+    function render() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === index));
+      const pct = ((index + 1) / slides.length) * 100;
+      bar.style.width = pct + '%';
+      count.textContent = 'Slide ' + (index + 1) + ' / ' + slides.length;
+    }
+
+    function next() { if (index < slides.length - 1) { index += 1; render(); } }
+    function prev() { if (index > 0) { index -= 1; render(); } }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') next();
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') prev();
+      if (e.key === 'Home') { index = 0; render(); }
+      if (e.key === 'End') { index = slides.length - 1; render(); }
+    });
+
+    window.addEventListener('click', next);
+    render();
+  </script>
+</body>
+</html>
